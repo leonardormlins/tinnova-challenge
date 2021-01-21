@@ -2,10 +2,15 @@
   "name": "veiculos",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "test": ""
+    "test": "1"
   },
   "author": "Leonardo Lins",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.3",
+    "express": "^4.17.1"
+  }
 }
