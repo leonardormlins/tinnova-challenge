@@ -9,5 +9,7 @@ module.exports = () => {
 
   app.use(bodyParser.json());
 
+  require('../api/routes/veiculo')(app);
+
   return app;
 };

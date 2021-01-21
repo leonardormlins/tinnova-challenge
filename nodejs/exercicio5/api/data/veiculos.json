@@ -1,0 +1,24 @@
+{
+    "veiculos": {
+        "data": [
+            {
+                "veiculo": "Uno Mille",
+                "marca": "Fiat",
+                "ano": 2005,
+                "descricao": "Cor cinza",
+                "vendido": false,
+                "created": "2021-01-21T18:25:30-03:00",
+                "updated": "2021-01-21T18:25:30-03:00"
+            },
+            {
+                "veiculo": "Civic",
+                "marca": "Honda",
+                "ano": 2012,
+                "descricao": "Cor prata",
+                "vendido": false,
+                "created": "2021-01-19T18:25:30-03:00",
+                "updated": "2021-01-19T18:25:30-03:00"
+            }
+        ]
+    }
+}

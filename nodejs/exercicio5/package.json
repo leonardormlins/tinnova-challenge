@@ -2,8 +2,9 @@
   "name": "veiculos",
   "version": "1.0.0",
   "description": "",
-  "main": "api/index.js",
+  "main": "index.js",
   "scripts": {
+    "start": "nodemon server",
     "test": "1"
   },
   "author": "Leonardo Lins",
