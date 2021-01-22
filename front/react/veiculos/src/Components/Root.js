@@ -11,6 +11,7 @@ import Consultar from './Consultar';
 import Buscar from './Buscar';
 import Listar from './Listar';
 import ListarTodos from './ListarTodos';
+import UltimaSemana from './UltimaSemana';
 
 import axios from 'axios';
 
@@ -19,7 +20,7 @@ axios.defaults.baseURL = 'http://localhost:8080/'
 const PagesRoot = () => (
   <Router>
     <Switch>
-      <Route path='/consultar' component={Consultar}/>
+      <Route path='/ultima-semana' component={UltimaSemana}/>
       <Route path='/todos' component={ListarTodos}/>
       <Route path='/consultar' component={Consultar}/>
       <Route path='/cadastrar' component={Cadastrar}/>

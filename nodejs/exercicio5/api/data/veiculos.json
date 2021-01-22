@@ -30,6 +30,16 @@
                 "vendido": false,
                 "created": "2021-01-22T03:40:40.467Z",
                 "updated": "2021-01-22T03:40:40.467Z"
+            },
+            {
+                "id": "85caddba-417f-48cb-bf53-69ba21dfa081",
+                "veiculo": "HB20",
+                "marca": "Hyundai",
+                "ano": "2012",
+                "descricao": "Cor branca",
+                "vendido": false,
+                "created": "2020-01-01T19:03:03.705Z",
+                "updated": "2020-01-01T19:03:03.705Z"
             }
         ]
     }
