@@ -1,5 +1,15 @@
 # Tinnova Challenge
-Desafio técnico Tinnova
+**Desafio técnico Tinnova**
 
+## Descrição
 Este repositório foi criado para resolução dos exercicios propostos pela Tinnova. Todos exercícios foram desenvolvidos nas linguagens java e javascript (Nodejs).
 
+O protótipo do frontend foi desenvolvido na ferramenta Figma. 
+- [Link Figma](https://www.figma.com/file/1nywLXP5oUFWodfVGQCvT8/Untitled?node-id=0%3A1)
+
+## Estrutura
+Este repositório está estruturado em diretórios back-end (Java e Nodejs) e um para o frontend em Reactjs.
+
+Para cada exercício existe um arquivo de resolução em código e um de comentário em markdown. 
+
+A instalação e configuração dos ambientes são esclarecidas nos readme específicos de cada resolução.
