@@ -16,14 +16,14 @@ const Listar = () => {
         <div className="TituloMenu">Listar / Exibir</div>
           <div className="Body-content">
             <Link to='/todos'>
-              <button className="Botao-menu-menor">Todos os veículos da base</button>
+              <button className="Botao-menu">Todos os veículos da base</button>
             </Link>
             <Link to='/decada'>
-              <button className="Botao-menu-menor">Qtde por década de fabricação</button>
+              <button className="Botao-menu">Qtde por década de fabricação</button>
             </Link>
             <div>
               <Link to='/ultima-semana'>
-                <button className="Botao-menu-menor">Cadastrados na última semana</button>
+                <button className="Botao-menu">Cadastrados na última semana</button>
               </Link>
             </div>
           </div>

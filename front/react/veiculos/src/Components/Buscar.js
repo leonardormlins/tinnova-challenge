@@ -49,7 +49,7 @@ const Buscar = () => {
 
   function renderEncontrados() {
     return (
-      encontrados.map(veiculo => <Card prop={veiculo}></Card>)
+      encontrados.map(veiculo => <Card prop={veiculo} id={veiculo.id}></Card>)
     )
   }
 
@@ -61,13 +61,12 @@ const Buscar = () => {
     if(values.chave === 'ano') query += 'ano=' + values.ano;
     if(values.chave === 'descricao') query += 'descricao=' + values.descricao;
     if(values.chave === 'vendido') query += 'vendido=' + values.vendido;
-    console.log(query)
     axios.get(`http://localhost:8080/buscar/?${query}`)
     .then( res => {
       setValues(initialObj);
       setEncontrados(res.data.encontrados);
     })
-    .catch( err => console.log(err) )
+    .catch( err => alert('Erro na conexão com o servidor!') )
   }
 
   return (

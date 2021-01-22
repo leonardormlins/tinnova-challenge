@@ -32,7 +32,6 @@ const ListarTodos = () => {
           <div className="TituloMenu">Listar Todos</div>
           <div>{encontrados ? encontrados.length + ' Resultados' : 'Nenhum resultado'}</div>
           {encontrados ? renderEncontrados() : null}
-          {console.log(encontrados)}
         </article>
         <footer>Desenvolvido por Leonardo Lins</footer>
       </body>

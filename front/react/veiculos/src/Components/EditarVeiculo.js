@@ -25,7 +25,7 @@ const EditarVeiculo = (veiculo) => {
           "descricao": values.descricao,
           "vendido": values.vendido === "false" ? 'false' : 'true'
         })
-        .then( res => res.status == 200 ? alert('Atualizado com sucesso!') : alert('Ocorreu um erro ao atualizar!'))
+        .then( res => res.status === 200 ? alert('Atualizado com sucesso!') : alert('Ocorreu um erro ao atualizar!'))
         .catch( err => console.log(err) )
     }
 

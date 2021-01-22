@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import logoMinor from './Styles/logoMinor.svg';
 import './Styles/Cadastrar.css';
@@ -20,9 +20,9 @@ const Cadastrar = () => {
       "marca": values.marca,
       "ano": values.ano,
       "descricao": values.descricao,
-      "vendido": values.vendido == "false" ? false : true
+      "vendido": values.vendido === "false" ? false : true
     })
-      .then( res => res.status == 201 ? alert('Cadastrado com sucesso!') : alert('Ocorreu um erro ao cadastrar!'))
+      .then( res => res.status === 201 ? alert('Cadastrado com sucesso!') : alert('Ocorreu um erro ao cadastrar!'))
       .catch( err => alert('Ocorreu um erro na conexão com servidor!') )
     setValues({ veiculo: '', marca:'',
     ano: '', descricao: '', vendido: ''});
@@ -38,7 +38,6 @@ const Cadastrar = () => {
   }
 
   function validacaoDados() {
-    console.log(values.vendido, !!values.vendido, typeof values.vendido)
     if(values.veiculo && values.marca && values.ano && values.descricao && values.vendido){
       return true;
     }
