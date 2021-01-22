@@ -5,7 +5,7 @@ import './Styles/Cadastrar.css';
 
 function initialState() {
   return { veiculo: '', marca:'Volkswagem',
-            ano: '', descricao: '', vendido: 'Sim'}
+            ano: '', descricao: '', vendido: 'true'}
 }
 
 const Cadastrar = () => {

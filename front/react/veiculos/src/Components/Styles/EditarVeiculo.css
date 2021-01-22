@@ -1,3 +1,16 @@
 .EditarVeiculo{
     padding-top: 25px;
 }
+
+.BotaoRemover{
+    color: #ffffff;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    height: 40px;
+    width: 120px;
+    margin-top: 20px;
+    cursor: pointer;
+  }

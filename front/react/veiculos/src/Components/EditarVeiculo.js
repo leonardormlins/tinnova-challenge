@@ -38,6 +38,13 @@ const EditarVeiculo = (veiculo) => {
         .catch( err => console.log(err) )
     }
 
+    async function handleRemove(event){
+      event.preventDefault();
+      axios.delete('http://localhost:8080/veiculos/'+ veiculo.prop.id)
+      .then(res => res.status === 200 ? alert('Removido com sucesso!') : alert('Ocorreu algum problema durante a remoção!'))
+      .catch(err => alert('Ocorreu algum problema durante a remoção!'))
+    }
+
     function validacaoDados() {
       console.log(!!values.vendido, typeof values.vendido, values.vendido)
         if(values.veiculo && values.marca && values.ano && values.descricao && values.vendido){
@@ -73,6 +80,8 @@ const EditarVeiculo = (veiculo) => {
             </select>
             <input type="submit" className="Botao" value="Cadastrar"
               onClick={handleSubmit}></input>
+            <input type="submit" className="BotaoRemover" value="Remover"
+              onClick={handleRemove}></input>
           </form>
         </div>
     )
