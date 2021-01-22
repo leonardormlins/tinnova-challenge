@@ -88,6 +88,7 @@ const Buscar = () => {
     console.log(query)
     axios.get(`http://localhost:8080/buscar/?${query}`)
     .then( res => {
+      console.log(res)
       setValues(initialObj);
       setEncontrados(res.data.encontrados);
     })
@@ -103,7 +104,7 @@ const Buscar = () => {
           </div>
         </header>
         <article>
-          <h2>Busca</h2>
+          <h2>Buscar e Editar</h2>
           <form className="FormBusca">
             <span className="FontSpan">Chave</span>
             <select className="SelectChave" value={values.chave} name="chave" id="chave" onChange={onChange} required>
@@ -125,7 +126,9 @@ const Buscar = () => {
             <div>
               <button className="Botao" onClick={buscar}>Buscar</button>
             </div>
+            <div>{encontrados ? encontrados.length + 'Resultados' : 'Nenhum resultado'}</div>
           </form>
+          {console.log(values.chave)}
           {encontrados ? renderEncontrados() : null}
         </article>
         <footer>Desenvolvido por Leonardo Lins</footer>

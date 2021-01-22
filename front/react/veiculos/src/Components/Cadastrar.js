@@ -4,8 +4,8 @@ import logoMinor from './Styles/logoMinor.svg';
 import './Styles/Cadastrar.css';
 
 function initialState() {
-  return { veiculo: '', marca:'',
-            ano: '', descricao: '', vendido: ''}
+  return { veiculo: '', marca:'Volkswagem',
+            ano: '', descricao: '', vendido: 'Sim'}
 }
 
 const Cadastrar = () => {
@@ -38,6 +38,7 @@ const Cadastrar = () => {
   }
 
   function validacaoDados() {
+    console.log(values.vendido, !!values.vendido, typeof values.vendido)
     if(values.veiculo && values.marca && values.ano && values.descricao && values.vendido){
       return true;
     }
@@ -73,9 +74,9 @@ const Cadastrar = () => {
             <span>Descrição</span>
             <input className="InputDescricao" value={values.descricao} name="descricao" onChange={onChange} required></input>
             <span>Vendido</span>
-            <select className="SelectVendido" name="vendido" id="vendido" onChange={onChange} required>
-              <option value={true}>Sim</option>
-              <option value={false}>Não</option>
+            <select className="SelectVendido" value={values.vendido} name="vendido" id="vendido" onChange={onChange} required>
+              <option value='true'>Sim</option>
+              <option value='false'>Não</option>
             </select>
             <input type="submit" className="Botao" value="Cadastrar"
               onClick={handleSubmit}></input>

@@ -17,19 +17,29 @@ const EditarVeiculo = (veiculo) => {
     async function handleSubmit(event) {
         event.preventDefault();
         const validacao = validacaoDados()
+        console.log(validacao)
         if(!validacao) return alert('Erro: Preencha os campos corretamente!');
-        axios.put('http://localhost:8080/veiculos/'+ veiculo.prop.id, {
-        "veiculo": values.veiculo,
-        "marca": values.marca,
-        "ano": values.ano,
-        "descricao": values.descricao,
-        "vendido": values.vendido == "false" ? false : true
+        console.log('http://localhost:8080/veiculos/'+ veiculo.prop.id);
+        console.log({
+          "veiculo": values.veiculo,
+          "marca": values.marca,
+          "ano": values.ano,
+          "descricao": values.descricao,
+          "vendido": values.vendido === "false" ? false : true
         })
-        .then( res => res.status == 201 ? alert('Atualizado com sucesso!') : alert('Ocorreu um erro ao atualizar!'))
+        axios.put('http://localhost:8080/veiculos/'+ veiculo.prop.id, {
+          "veiculo": values.veiculo,
+          "marca": values.marca,
+          "ano": values.ano,
+          "descricao": values.descricao,
+          "vendido": values.vendido === "false" ? 'false' : 'true'
+        })
+        .then( res => res.status == 200 ? alert('Atualizado com sucesso!') : alert('Ocorreu um erro ao atualizar!'))
         .catch( err => console.log(err) )
     }
 
     function validacaoDados() {
+      console.log(!!values.vendido, typeof values.vendido, values.vendido)
         if(values.veiculo && values.marca && values.ano && values.descricao && values.vendido){
           return true;
         }
@@ -42,7 +52,7 @@ const EditarVeiculo = (veiculo) => {
             <span>Veículo</span>
             <input name="veiculo" value={values.veiculo} onChange={onChange} required></input>
             <span>Marca</span>
-            <select className="SelectMarca" name="marca" id="marca" onChange={onChange} required>
+            <select className="SelectMarca" value={values.marca} name="marca" id="marca" onChange={onChange} required>
               <option value="Volkswagem">Volkswagem</option>
               <option value="Fiat">Fiat</option>
               <option value="Ford">Ford</option>
@@ -57,9 +67,9 @@ const EditarVeiculo = (veiculo) => {
             <span>Descrição</span>
             <input className="InputDescricao" value={values.descricao} name="descricao" onChange={onChange} required></input>
             <span>Vendido</span>
-            <select className="SelectVendido" name="vendido" id="vendido" onChange={onChange} required>
-              <option value={true}>Sim</option>
-              <option value={false}>Não</option>
+            <select className="SelectVendido" value={values.vendido} name="vendido" id="vendido" onChange={onChange} required>
+              <option value='true'>Sim</option>
+              <option value='false'>Não</option>
             </select>
             <input type="submit" className="Botao" value="Cadastrar"
               onClick={handleSubmit}></input>
