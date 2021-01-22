@@ -11,7 +11,7 @@ module.exports = app => {
       .put(controller.atualizaVeiculo)
       .patch(controller.patchVeiculo)
 
-    app.route('/veiculos/busca')
-      .get(controller.buscarVeiculo);
+    app.route('/buscar')
+      .get(controller.buscarVeiculo)
 
 }

@@ -84,8 +84,6 @@ module.exports = app => {
     controller.buscarVeiculo = (req, res) => {
         const { veiculo, marca, ano,
                  descricao, vendido } = req.query;
-
-        console.log(vendido, typeof vendido)
     
         function buscar(elem) {
             if(elem.veiculo == veiculo) return elem;
