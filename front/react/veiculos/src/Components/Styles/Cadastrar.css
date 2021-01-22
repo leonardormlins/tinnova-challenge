@@ -1,0 +1,77 @@
+body{ 
+  height:100vh;
+  margin:0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header{
+  min-height:50px;
+  background: #6F1C70;
+}
+
+footer{
+  min-height:50px;
+  background:#fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column;
+}
+
+footer{
+  margin-top:auto; 
+}
+
+input, select{
+  height: 22px;
+  font-size: 18px;
+}
+
+.Titulo{
+  font-size: 32px;
+  margin-top: 64px;
+}
+
+.Botao{
+  color: #ffffff;
+  background-color: #2C4A7A;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  height: 40px;
+  width: 120px;
+  margin-top: 20px;
+}
+
+.Form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SelectMarca{
+  width: 130px;
+  height: 28px;
+  padding-left: 5px;
+}
+
+.InputAno {
+  width: 100px;
+  text-align: center;
+}
+
+.InputDescricao{
+  width: 300px;
+  text-align: center;
+}
+
+.SelectVendido{
+  width: 80px;
+  height: 28px;
+  padding-left: 5px;
+}
