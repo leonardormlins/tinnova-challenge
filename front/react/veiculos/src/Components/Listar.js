@@ -24,11 +24,11 @@ const Listar = () => {
             <Link to='/todos'>
               <button className="Botao-menu-menor">Todos os veículos da base</button>
             </Link>
-            <Link to='/consultar'>
+            <Link to='/decada'>
               <button className="Botao-menu-menor">Qtde por década de fabricação</button>
             </Link>
             <div>
-              <Link to='/consultar'>
+              <Link to='/decada'>
                 <button className="Botao-menu-menor">Qtde por década de fabricação</button>
               </Link>
               <Link to='/ultima-semana'>
