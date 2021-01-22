@@ -2,22 +2,34 @@
     "veiculos": {
         "data": [
             {
-                "veiculo": "Uno Mille",
-                "marca": "Fiat",
-                "ano": 2005,
-                "descricao": "Cor cinza",
-                "vendido": false,
-                "created": "2021-01-21T18:25:30-03:00",
-                "updated": "2021-01-21T18:25:30-03:00"
+                "id": "7810af49-6eb6-4985-ad1a-e36ceac83a22",
+                "veiculo": "Santana",
+                "marca": "Volkswagem",
+                "ano": 2000,
+                "descricao": "Cor vinho",
+                "vendido": true,
+                "created": "2021-01-01T03:38:26.642Z",
+                "updated": "2021-01-01T03:38:26.642Z"
             },
             {
-                "veiculo": "Civic",
-                "marca": "Honda",
-                "ano": 2012,
+                "id": "26a5e34c-b00b-4822-9480-e062c69a5e85",
+                "veiculo": "Uno",
+                "marca": "Fiat",
+                "ano": 2000,
                 "descricao": "Cor prata",
                 "vendido": false,
-                "created": "2021-01-19T18:25:30-03:00",
-                "updated": "2021-01-19T18:25:30-03:00"
+                "created": "2021-01-22T03:40:22.108Z",
+                "updated": "2021-01-22T03:40:22.108Z"
+            },
+            {
+                "id": "35bd823a-54fb-4c2d-955d-f8039801bbaf",
+                "veiculo": "Civic",
+                "marca": "Honda",
+                "ano": 2010,
+                "descricao": "Cor prata",
+                "vendido": false,
+                "created": "2021-01-22T03:40:40.467Z",
+                "updated": "2021-01-22T03:40:40.467Z"
             }
         ]
     }
