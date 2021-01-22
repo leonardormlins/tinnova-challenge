@@ -28,9 +28,6 @@ const Listar = () => {
               <button className="Botao-menu-menor">Qtde por década de fabricação</button>
             </Link>
             <div>
-              <Link to='/decada'>
-                <button className="Botao-menu-menor">Qtde por década de fabricação</button>
-              </Link>
               <Link to='/ultima-semana'>
                 <button className="Botao-menu-menor">Cadastrados na última semana</button>
               </Link>

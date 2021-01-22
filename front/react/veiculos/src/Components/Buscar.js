@@ -126,7 +126,7 @@ const Buscar = () => {
             <div>
               <button className="Botao" onClick={buscar}>Buscar</button>
             </div>
-            <div>{encontrados ? encontrados.length + 'Resultados' : 'Nenhum resultado'}</div>
+            <div>{encontrados ? encontrados.length + ' Resultados' : 'Nenhum resultado'}</div>
           </form>
           {console.log(values.chave)}
           {encontrados ? renderEncontrados() : null}
