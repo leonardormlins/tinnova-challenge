@@ -5,6 +5,12 @@ module.exports = app => {
     const controller = {};
 
     const { veiculos: veiculosMock } = veiculosDB;
+
+    function buscar(idVeiculo) {
+        const veiculoEncontrado = veiculosMock.data.find(veiculo => veiculo.id === idVeiculo);
+        const veiculoIndice = veiculosMock.data.findIndex(veiculo => veiculo.id === idVeiculo);
+        return { veiculoEncontrado, veiculoIndice }
+    }
   
     controller.listarVeiculos = (req, res) => res.status(200).json(veiculosDB);
 
@@ -25,12 +31,6 @@ module.exports = app => {
     controller.getVeiculo = (req, res) => {
         const { idVeiculo } = req.params;
 
-        function buscar(id) {
-            const veiculoEncontrado = veiculosMock.data.find(veiculo => veiculo.id === idVeiculo);
-            const veiculoIndice = veiculosMock.data.findIndex(veiculo => veiculo.id === idVeiculo);
-            return { veiculoEncontrado, veiculoIndice }
-        }
-
         const { veiculoEncontrado } = buscar(idVeiculo);
 
         res.status(200).json({veiculoEncontrado});
@@ -38,7 +38,7 @@ module.exports = app => {
 
     controller.removerVeiculo = (req, res) => {
         const { idVeiculo } = req.params;
-        const buscar = controller.getVeiculo.buscar;
+        // const buscar = controller.getVeiculo.buscar;
 
         const { veiculoIndice } = buscar(idVeiculo);
 
@@ -55,7 +55,7 @@ module.exports = app => {
 
     controller.atualizaVeiculo = (req, res) => {
         const { idVeiculo } = req.params;
-        const buscar = controller.getVeiculo.buscar;
+        // const buscar = controller.getVeiculo.buscar;
 
         const { veiculoEncontrado, veiculoIndice } = buscar(idVeiculo);
 
@@ -71,7 +71,7 @@ module.exports = app => {
                 marca: req.body.marca,
                 ano: req.body.ano,
                 descricao: req.body.descricao,
-                vendido: req.body.vendido,
+                vendido: req.body.vendido === 'false' ? false : true,
                 created: veiculoEncontrado.created,
                 updated: new Date(),
             }
@@ -102,7 +102,7 @@ module.exports = app => {
     controller.patchVeiculo = (req, res) => {
         const { idVeiculo } = req.params;
         const body = req.body;
-        const buscar = controller.getVeiculo.buscar;
+        // const buscar = controller.getVeiculo.buscar;
 
         const { veiculoEncontrado, veiculoIndice } = buscar(idVeiculo);
 
