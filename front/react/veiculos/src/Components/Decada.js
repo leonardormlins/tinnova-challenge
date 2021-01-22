@@ -1,16 +1,12 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import logoMinor from './Styles/logoMinor.svg';
 import './Styles/Busca.css';
-import Card from './Card';
-import { set } from 'js-cookie';
-
 
 const Decada = () => {
   const [encontrados, setEncontrados] = useState();
-  const [quantidadePorDecadas, setQuantidadePorDecadas] = useState();
 
-  useEffect(() => { 
+  useEffect(() => {
     axios.get('/veiculos')
     .then( res => setEncontrados(res.data.veiculos.data ))
   }, [])
@@ -32,7 +28,6 @@ const Decada = () => {
     }
     return (Math.floor(ano/10) * 10).toString();
 }
-
 
   return (
     <div className="ListarTodos">

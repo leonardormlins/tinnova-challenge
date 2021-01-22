@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import logoMinor from './Styles/logoMinor.svg';
 import './Styles/Busca.css';
@@ -11,7 +11,8 @@ const UltimaSemana = () => {
   useEffect(() => { 
     axios.get('/veiculos')
     .then( res => {
-          const veiculos = res.data.veiculos.data.filter( veiculo => new Date().getDate() - 7 < new Date(veiculo.created).getDate())
+          const veiculos = res.data.veiculos.data
+          .filter( veiculo => new Date().getDate() - 7 < new Date(veiculo.created).getDate())
           setEncontrados(veiculos);});
   }, [])
 
@@ -34,7 +35,6 @@ const UltimaSemana = () => {
           <div className="TituloMenu">Registrados última semana</div>
           <div>{encontrados ? encontrados.length + ' Resultados' : 'Nenhum resultado'}</div>
           {encontrados ? renderEncontrados() : null}
-          {console.log(encontrados)}
         </article>
         <footer>Desenvolvido por Leonardo Lins</footer>
       </body>

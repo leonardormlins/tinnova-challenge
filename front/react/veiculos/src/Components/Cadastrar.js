@@ -5,7 +5,7 @@ import './Styles/Cadastrar.css';
 
 function initialState() {
   return { veiculo: '', marca:'Volkswagem',
-            ano: '', descricao: '', vendido: 'true'}
+            ano: '', descricao: '', vendido: 'true' }
 }
 
 const Cadastrar = () => {
@@ -23,7 +23,7 @@ const Cadastrar = () => {
       "vendido": values.vendido == "false" ? false : true
     })
       .then( res => res.status == 201 ? alert('Cadastrado com sucesso!') : alert('Ocorreu um erro ao cadastrar!'))
-      .catch( err => console.log(err) )
+      .catch( err => alert('Ocorreu um erro na conexão com servidor!') )
     setValues({ veiculo: '', marca:'',
     ano: '', descricao: '', vendido: ''});
   }

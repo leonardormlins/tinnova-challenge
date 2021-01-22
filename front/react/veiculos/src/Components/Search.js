@@ -49,7 +49,6 @@ const Search = () => {
             </header>
             <div className="Space-top"></div>
 
-            {/* Content */}
             {console.log('values',values)}
             <div className='Search-box'>
                 <input className='Search-input' type='text' onChange={onChange}

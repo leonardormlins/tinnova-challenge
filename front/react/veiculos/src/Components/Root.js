@@ -4,7 +4,6 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import StoreProvider from './Store/Provider';
 import Home from './Home';
 import Cadastrar from './Cadastrar';
 import Consultar from './Consultar';

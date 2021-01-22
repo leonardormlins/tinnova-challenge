@@ -1,6 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
-import StoreContext from './Store/Context';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import logoMinor from './Styles/logoMinor.svg';
 import './Styles/Busca.css';
@@ -9,7 +7,7 @@ import Card from './Card';
 const initialObj = {
   chave: '', vendido: 'true', veiculo: '', ano: '', descricao: '', 
   marca: ['Volkswagem', 'Fiat', 'Ford', 'Chevrolet', 'Honda', 
-                      'Hyundai', 'Renault', 'Toyota'],
+  'Hyundai', 'Renault', 'Toyota'],
   marcaSelecionada: 'Volkswagem',
 }
 
@@ -20,8 +18,6 @@ function initialState(){
 const Buscar = () => {
   const [values, setValues] = useState(initialState);
   const [encontrados, setEncontrados] = useState([]);
-  //Todo
-  //const [adicionar, setAdicionar] = useState(false);
 
   useEffect(() => { }, [])
 
@@ -40,26 +36,6 @@ const Buscar = () => {
         {values.marca.map(marca => <option value={marca}>{marca}</option>)}
       </select>
     );
-  }
-
-  // function adicionaChave(){
-  //   setAdicionar(true)
-  // }
-
-  function renderChave() {
-    return (
-      <div>
-        <span className="FontSpan">Chave</span>
-        <select className="SelectChave" value={values.chave} name="chave" id="chave" onChange={onChange} required>
-          <option value="">Selecione</option>
-          <option value="veiculo">Veículo</option>
-          <option value="marca">Marca</option>
-          <option value="ano">Ano</option>
-          <option value="descricao">Descrição</option>
-          <option value="vendido">Vendido</option>
-        </select>
-      </div>
-    )
   }
 
   function renderVendido(){
@@ -88,7 +64,6 @@ const Buscar = () => {
     console.log(query)
     axios.get(`http://localhost:8080/buscar/?${query}`)
     .then( res => {
-      console.log(res)
       setValues(initialObj);
       setEncontrados(res.data.encontrados);
     })
@@ -121,14 +96,11 @@ const Buscar = () => {
             {values.chave === 'descricao' ? (<input value={values.descricao}
                                               onChange={onChange} name="descricao"></input>) : null}
             {values.chave === 'vendido' ? renderVendido() : null}
-            {/*adicionar ? renderChave() : null*/}
-            {/*<div className="AdicionarChave" onClick={adicionaChave}>+ Adicionar chave</div>*/}
             <div>
               <button className="Botao" onClick={buscar}>Buscar</button>
             </div>
             <div>{encontrados ? encontrados.length + ' Resultados' : 'Nenhum resultado'}</div>
           </form>
-          {console.log(values.chave)}
           {encontrados ? renderEncontrados() : null}
         </article>
         <footer>Desenvolvido por Leonardo Lins</footer>

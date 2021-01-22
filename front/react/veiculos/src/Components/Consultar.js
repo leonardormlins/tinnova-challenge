@@ -1,14 +1,9 @@
-import React, { useState, useContext, useEffect } from 'react';
-import StoreContext from './Store/Context';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import logoMinor from './Styles/logoMinor.svg';
 import './Styles/Home.css';
 
 const Consultar = () => {
-  const [following, setFollowing] = useState([]);
-
-  useEffect(() => { }, [])
 
   return (
     <div className="Consultar">
