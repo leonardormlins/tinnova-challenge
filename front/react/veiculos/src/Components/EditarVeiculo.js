@@ -19,7 +19,7 @@ const EditarVeiculo = (veiculo) => {
         const validacao = validacaoDados()
         console.log(validacao)
         if(!validacao) return alert('Erro: Preencha os campos corretamente!');
-        console.log('http://localhost:8080/veiculos/'+ veiculo.prop.id);
+        console.log('/veiculos/'+ veiculo.prop.id);
         console.log({
           "veiculo": values.veiculo,
           "marca": values.marca,
@@ -27,7 +27,7 @@ const EditarVeiculo = (veiculo) => {
           "descricao": values.descricao,
           "vendido": values.vendido === "false" ? false : true
         })
-        axios.put('http://localhost:8080/veiculos/'+ veiculo.prop.id, {
+        axios.put('/veiculos/'+ veiculo.prop.id, {
           "veiculo": values.veiculo,
           "marca": values.marca,
           "ano": values.ano,
@@ -40,7 +40,7 @@ const EditarVeiculo = (veiculo) => {
 
     async function handleRemove(event){
       event.preventDefault();
-      axios.delete('http://localhost:8080/veiculos/'+ veiculo.prop.id)
+      axios.delete('/veiculos/'+ veiculo.prop.id)
       .then(res => res.status === 200 ? alert('Removido com sucesso!') : alert('Ocorreu algum problema durante a remoção!'))
       .catch(err => alert('Ocorreu algum problema durante a remoção!'))
     }

@@ -19,8 +19,23 @@ const Listar = () => {
           </div>
         </header>
         <article>
-          <h2>Listar / Exibir </h2>
-          
+        <div className="TituloMenu">Listar / Exibir</div>
+          <div className="Body-content">
+            <Link to='/todos'>
+              <button className="Botao-menu-menor">Todos os veículos da base</button>
+            </Link>
+            <Link to='/consultar'>
+              <button className="Botao-menu-menor">Qtde por década de fabricação</button>
+            </Link>
+            <div>
+              <Link to='/consultar'>
+                <button className="Botao-menu-menor">Qtde por década de fabricação</button>
+              </Link>
+              <Link to='/consultar'>
+                <button className="Botao-menu-menor">Cadastrados na última semana</button>
+              </Link>
+            </div>
+          </div>
         </article>
         <footer>Desenvolvido por Leonardo Lins</footer>
       </body>

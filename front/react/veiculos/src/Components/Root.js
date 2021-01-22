@@ -10,14 +10,17 @@ import Cadastrar from './Cadastrar';
 import Consultar from './Consultar';
 import Buscar from './Buscar';
 import Listar from './Listar';
+import ListarTodos from './ListarTodos';
 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8081/api'
+axios.defaults.baseURL = 'http://localhost:8080/'
 
 const PagesRoot = () => (
   <Router>
     <Switch>
+      <Route path='/consultar' component={Consultar}/>
+      <Route path='/todos' component={ListarTodos}/>
       <Route path='/consultar' component={Consultar}/>
       <Route path='/cadastrar' component={Cadastrar}/>
       <Route path='/busca-manual' component={Buscar}/>

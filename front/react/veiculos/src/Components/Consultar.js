@@ -19,7 +19,7 @@ const Consultar = () => {
           </div>
         </header>
         <article>
-          <h2>Consultar</h2>
+          <div className="TituloMenu">Consultar</div>
           <div className="Body-content">
             <Link to='/busca-manual'>
               <button className="Botao-menu">Buscar e Editar</button>

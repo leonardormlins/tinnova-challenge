@@ -45,4 +45,20 @@ article{
   border-radius: 10px;
   font-size: 18px;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.Botao-menu-menor{
+  margin: 20px;
+  color: #ffffff;
+  background-color: #2C4A7A;
+  border: none;
+  padding: 40px 74px;
+  margin-top: 50px;
+  border-radius: 10px;
+  font-size: 12px;
+  text-decoration: none;
+  width: 250px;
+  height: 100px;
+  cursor: pointer;
 }

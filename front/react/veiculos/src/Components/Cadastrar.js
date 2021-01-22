@@ -15,7 +15,7 @@ const Cadastrar = () => {
     event.preventDefault();
     const validacao = validacaoDados()
     if(!validacao) return alert('Erro: Preencha os campos corretamente!');
-    axios.post('http://localhost:8080/veiculos', {
+    axios.post('/veiculos', {
       "veiculo": values.veiculo,
       "marca": values.marca,
       "ano": values.ano,
@@ -54,7 +54,7 @@ const Cadastrar = () => {
           </div>
         </header>
         <article>
-          <h2>Cadastrar</h2>
+        <div className="TituloMenu">Cadastrar</div>
           <form className="Form">
             <span>Veículo</span>
             <input name="veiculo" value={values.veiculo} onChange={onChange} required></input>
