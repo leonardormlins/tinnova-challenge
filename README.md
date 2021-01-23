@@ -13,3 +13,8 @@ Este repositório está estruturado em diretórios back-end (Nodejs) e um para o
 Para cada exercício existe um arquivo de resolução em código e um de comentário em markdown. 
 
 A instalação e configuração dos ambientes são esclarecidas nos readme específicos de cada resolução.
+
+## Testes
+Foi realizado teste da API utilizando Mocha e Chai para o execício de número 5, como solicitado. As instruções de teste também se encontram nos diretórios.
+
+O arquivo Postman para utilização da API se encontra na raiz deste repositório
