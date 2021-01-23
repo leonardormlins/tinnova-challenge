@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
-    "test": "1"
+    "test": "cd tests/ && mocha"
   },
   "author": "Leonardo Lins",
   "license": "ISC",
