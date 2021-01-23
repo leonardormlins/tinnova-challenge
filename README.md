@@ -18,3 +18,7 @@ A instalação e configuração dos ambientes são esclarecidas nos readme espec
 Foi realizado teste da API utilizando Mocha e Chai para o execício de número 5, como solicitado. As instruções de teste também se encontram nos diretórios.
 
 O arquivo Postman para utilização da API se encontra no link: [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/0bdedb36eca84ec4d0b0)
+
+## Deploy 
+Frontend: https://tinnova-veiculos.netlify.app/
+Backend: https://tinnova-veiculos.herokuapp.com/
