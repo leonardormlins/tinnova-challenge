@@ -40,6 +40,26 @@
                 "vendido": false,
                 "created": "2020-01-01T19:03:03.705Z",
                 "updated": "2020-01-01T19:03:03.705Z"
+            },
+            {
+                "id": "b3f16606-434d-4df6-aa7f-b6ebd4f837b2",
+                "veiculo": "Uno",
+                "marca": "Fiat",
+                "ano": 1992,
+                "descricao": "Cor cinza",
+                "vendido": false,
+                "created": "2021-01-23T00:29:11.222Z",
+                "updated": "2021-01-23T00:29:11.222Z"
+            },
+            {
+                "id": "3b2d6c5a-dc35-46ac-ac33-e5ea7a0eefc8",
+                "veiculo": "Corsa",
+                "marca": "Chevrolet",
+                "ano": 1999,
+                "descricao": "Cor cinza",
+                "vendido": true,
+                "created": "2021-01-23T00:54:28.301Z",
+                "updated": "2021-01-23T00:54:28.301Z"
             }
         ]
     }
