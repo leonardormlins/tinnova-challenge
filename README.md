@@ -2,7 +2,7 @@
 **Desafio técnico Tinnova**
 
 ## Descrição
-Este repositório foi criado para resolução dos exercicios propostos pela Tinnova. Todos exercícios foram desenvolvidos em javascript (Nodejs).
+Este repositório foi criado para resolução dos exercícios propostos pela Tinnova. Todos os exercícios foram desenvolvidos em javascript (Nodejs).
 
 O protótipo do frontend foi desenvolvido na ferramenta Figma. 
 - [Link Figma](https://www.figma.com/file/1nywLXP5oUFWodfVGQCvT8/Untitled?node-id=0%3A1)
